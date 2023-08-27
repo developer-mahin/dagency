@@ -1,0 +1,102 @@
+.dropDown {
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: #fff;
+  height: auto;
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  top: 15rem;
+  padding: 20px 10px;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.container:hover .dropDown {
+  visibility: visible;
+  opacity: 1;
+  top: 4rem;
+}
+
+.container .dropDown .dropDownMenuItem {
+  width: 100%;
+  transition: all 0.3s linear;
+  padding: 10px;
+  font-weight: 600;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  color: #231f20;
+  margin: 5px 0px;
+}
+
+.container .dropDown .dropDownMenuItem:hover {
+  background-color: #000;
+  color: white;
+}
+
+.subMenu {
+  position: absolute;
+  transform: translateX(-50%);
+  right: -487px;
+  background-color: #fff;
+  height: auto;
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  top: 15rem;
+  padding: 20px 10px;
+  transition: all 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.subMenuContainer {
+  width: 100%;
+  transition: all 0.3s linear;
+  padding: 10px;
+  font-weight: 600;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  color: #231f20;
+  margin: 5px 0px;
+}
+
+.subMenuContainer:hover {
+  background-color: #000;
+  color: white;
+}
+
+.subMenuContainer:hover .subMenu {
+  visibility: visible;
+  opacity: 1;
+  top: 8rem;
+}
+
+.subMenu li {
+  width: 100%;
+  transition: all 0.3s linear;
+  padding: 10px;
+  font-weight: 600;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  color: #231f20;
+  margin: 5px 0px;
+  border: 1px solid #f4f4f4;
+  font-size: 14px;
+}
+
+.subMenu li:hover {
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .subMenu {
+    right: -200px;
+  }
+}

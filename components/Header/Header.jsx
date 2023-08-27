@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
-import { usePathname } from "next/navigation";
+import style from "./style.module.css";
 
 const Header = () => {
   const pathname = usePathname();
@@ -24,15 +25,87 @@ const Header = () => {
         </Link>
       </li>
       <li>
-        <Link href="/about" className="font-medium text-gray-100">
+        <Link
+          href="/about"
+          className={`${
+            pathname == "/about"
+              ? "text-[#5FB2FF] border-b-2 border-[#5FB2FF]"
+              : " text-gray-100"
+          } font-bold`}
+        >
           About Us
         </Link>
       </li>
-      <li>
-        <Link href="/service" className="font-medium text-gray-100">
-          Service
+
+      <div className={style.container}>
+        <Link
+          href="/services"
+          className={`${
+            pathname == "/services"
+              ? "text-[#5FB2FF] border-b-2 border-[#5FB2FF]"
+              : " text-gray-100"
+          } font-bold`}
+        >
+          Services
         </Link>
-      </li>
+        <ul className={style.dropDown}>
+          <li className={style.dropDownMenuItem}>
+            <Link href="/">UI/UX Design</Link>
+          </li>
+          <li className={style.dropDownMenuItem}>
+            <Link href="/">Web Development</Link>
+          </li>
+
+          <div className={style.subMenuContainer}>
+            <Link href="/">Search engine optimization (SEO)</Link>
+            <div className={style.subMenu}>
+              <li>
+                <Link href="/">User Interface</Link>
+              </li>
+              <li>
+                <Link href="/">App UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">optimization</Link>
+              </li>
+              <li>
+                <Link href="/">Responsive Web & App UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">Dashboard, Admin Panel UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">Sass Website UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">Crypto Website & App UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">Ecommerce Website & App UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">Web3 Website & App UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">NFT Website & App UI Design</Link>
+              </li>
+              <li>
+                <Link href="/">UX Research </Link>
+              </li>
+            </div>
+          </div>
+
+          <li className={style.dropDownMenuItem}>
+            <Link href="/">App Development</Link>
+          </li>
+          <li className={style.dropDownMenuItem}>
+            <Link href="/">Graphic Design</Link>
+          </li>
+          <li className={style.dropDownMenuItem}>
+            <Link href="/">Server Migration</Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 
