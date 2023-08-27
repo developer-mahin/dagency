@@ -80,7 +80,7 @@ const Slider = () => {
                 }
                 return (
                   <div className={`${position} ${styles.article}`} key={id}>
-                    <div className="lg:mx-[250px] static z-[9999] bg-white grid lg:grid-cols-2 items-center gap-[60px] p-14 justify-items-end">
+                    <div className="lg:mx-[250px] static z-[9999] bg-white grid lg:grid-cols-2 items-center gap-[60px] p-14 justify-items-end md:justify-items-center sm:justify-items-end">
                       <div className="relative">
                         <div>
                           <p className="text-start lg:text-[27px] text-lg font-semibold text-[#414246]">
@@ -101,7 +101,7 @@ const Slider = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="absolute -z-[89999] -left-[94px] -top-[118px] lg:block hidden">
+                        <div className="absolute -z-[89999] -left-[94px] -top-[132px] lg:block hidden">
                           <Image
                             src="/images/full-border.png"
                             alt=""
@@ -115,7 +115,7 @@ const Slider = () => {
                         <div>
                           <img
                             src={img}
-                            className="w-[240px] h-[240px]"
+                            className="w-[240px] h-[240px] "
                             alt=""
                           />
                         </div>
